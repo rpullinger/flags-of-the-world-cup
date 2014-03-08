@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    NETHERLANDS
+\*------------------------------------*/
+
+.flag--netherlands{
+    background: #fff;
+    position: relative;
+
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        height: 33.33%;
+        left: 0;
+        right: 0;
+    }
+
+    &:before{
+        background-color: #ae1c28;
+        bottom: 66.6666%;
+    }
+
+    &:after{
+        background-color: #21468b;
+        top: 66.6666%;
+    }
+}
