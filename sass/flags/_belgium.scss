@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    BELGIUM
+\*------------------------------------*/
+
+.flag--belgium{
+    background: #ffe936;
+    position: relative;
+
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        width: 33.33%;
+        top: 0;
+        bottom: 0;
+    }
+
+    &:before{
+        background-color: #ff0f21;
+        left: 66.6666%;
+    }
+
+    &:after{
+        background-color: #000;
+        right: 66.6666%;
+    }
+}
