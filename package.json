@@ -1,0 +1,36 @@
+{
+  "name": "flags-of-the-world-cup",
+  "version": "0.0.0",
+  "description": "Flags of the world cup in css",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rpullinger/flags-of-the-world-cup.git"
+  },
+  "author": "Richard Pullinger",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/rpullinger/flags-of-the-world-cup/issues"
+  },
+  "homepage": "https://github.com/rpullinger/flags-of-the-world-cup",
+
+  "devDependencies": {
+    "gulp-rename": "~1.2.0",
+    "tiny-lr": "0.0.5",
+    "gulp-livereload": "~1.2.0",
+    "gulp-ruby-sass": "~0.4.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-clean": "~0.2.4",
+    "gulp-minify-css": "~0.3.0",
+    "gulp": "~3.5.5",
+    "gulp-uglify": "~0.2.1",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-notify": "~1.1.0",
+    "gulp-jshint": "~1.5.0",
+    "gulp-cache": "~0.1.3"
+    "express": "~3.5.0"
+  }
+}
