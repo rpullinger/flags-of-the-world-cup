@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    ITALY
+\*------------------------------------*/
+
+.flag--italy{
+    background: #f1f2f1;
+    position: relative;
+
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        width: 33.33%;
+        top: 0;
+        bottom: 0;
+    }
+
+    &:before{
+        background-color: #ce2b37;
+        left: 66.6666%;
+    }
+
+    &:after{
+        background-color: #009246;
+        right: 66.6666%;
+    }
+}
