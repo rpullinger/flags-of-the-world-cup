@@ -1,0 +1,23 @@
+/*------------------------------------*\
+    JAPAN
+\*------------------------------------*/
+
+.flag--japan{
+    background: #fff;
+    position: relative;
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 33.3333%;
+        height: 0;
+        width: 33.3333%;
+        padding-bottom: 33.3333%;
+
+        transform: translateY(-50%);
+
+        border-radius: 50%;
+        background: #ef3340;
+    }
+}

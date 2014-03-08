@@ -21,6 +21,10 @@ $fixed-line-height: $base-line-height;
     MIXINS
 \*------------------------------------*/
 
+body{
+    background: #eee;
+}
+
 @import "mixins/rems";
 @import "mixins/media-queries";
 
@@ -29,3 +33,4 @@ $fixed-line-height: $base-line-height;
 @import "partials/countries-and-flags-layout";
 
 @import "flags/brazil";
+@import "flags/japan";
