@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    BASE
+\*------------------------------------*/
+
+/*
+Border box everything! http://paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+*{
+    &,
+    &:before,
+    &:after{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+
+
+
+/*
+Make images responsive by default
+ */
+img{
+    max-width: 100%;
+}
+
+
+
+
+/*
+Get forms elements to follow our font styling
+ */
+input,
+select,
+textarea,
+button{
+    font: inherit;
+}
+
+
+
+/*
+Shared vertical rhythm - csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote,p,address,
+table,
+fieldset,figure,
+hr,
+pre{
+    margin-top: 0;
+    @include rem('margin-bottom', $base-unit);
+
+    &:last-child,
+    &.last{ // remove from last if required
+       @extend %flush;
+    }
+}
+
+    %flush{ margin-bottom: 0; }
+    %tight{ @include rem('margin-bottom', $base-unit / 2); }
+    %spaced{ @include rem('margin-bottom', $base-unit * 2); }

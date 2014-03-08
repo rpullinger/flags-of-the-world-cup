@@ -1,0 +1,108 @@
+/*------------------------------------*\
+    TYPOGRAPHY
+\*------------------------------------*/
+
+
+/**
+ * Useful placeholders
+ */
+
+%hn{ font-family: $heading-font-family; }
+%h1{ @include font-size(30, $heading-line-height); }
+%h2{ @include font-size(24, $heading-line-height); }
+%h3{ @include font-size(22, $heading-line-height); }
+%h4{ @include font-size(20, $heading-line-height); }
+%h5{ @include font-size(18, $heading-line-height); }
+%h6{ @include font-size(16, $heading-line-height); }
+
+%fixed{
+    font-family: $fixed-font-family;
+    @include font-size($fixed-font-size, $fixed-line-height);
+}
+
+%mega{ @include font-size(50, $heading-line-height); }
+%huge{ @include font-size(40, $heading-line-height); }
+%small{ @include font-size(12); }
+
+%quiet{ color: #aaa; }
+%loud{ color: green; }
+
+%italic{ font-style: italic; }
+%bold{ font-weight: 900; }
+
+%lede{ @include font-size(20); }
+
+/**
+ * Style the basics
+ */
+
+body{
+    color: $text-color;
+    font-family: $base-font-family;
+    text-align: center;
+
+    @include font-size($base-font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    @extend %hn;
+}
+
+h1{ @extend %h1; }
+h2{ @extend %h2; }
+h3{ @extend %h3; }
+h4{ @extend %h4; }
+h5{ @extend %h5; }
+h6{ @extend %h6; }
+
+i,
+em{
+    @extend %italic;
+}
+
+b,
+strong{
+    @extend %bold;
+}
+
+pre,
+code{
+    @extend %fixed;
+}
+
+small{
+    @extend %small;
+    @extend %quiet;
+}
+
+sub{ vertical-align: bottom; }
+sup{ vertical-align: top; }
+
+hr{
+    border: 1px solid red;
+}
+
+ul,
+ol{
+    padding-left: 0;
+    list-style-position: outside;
+}
+
+dd{
+    margin-left: 0;
+}
+
+blockquote{
+    @include rem('margin-left', $base-unit);
+    @include rem('margin-right', $base-unit);
+}
+
+figure{
+    margin-left: 0;
+    margin-right: 0;
+}

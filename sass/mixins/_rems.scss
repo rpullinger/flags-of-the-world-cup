@@ -1,0 +1,62 @@
+/*------------------------------------*\
+    REMS
+\*------------------------------------*/
+
+$base-font-size: 16 !default;
+$base-line-height: 24 !default;
+
+/**
+ * Takes a property and one or many unitless values and converts them to rems with a
+ * pixel fallback.
+ *
+   `@include rem(padding-bottom, 24)`
+   `@include rem(margin, 24 48 12 24)`
+ *
+ * @param number $property The property to output
+ * @param list $values The values to convert. Unitless but think in pixels
+ */
+@mixin rem($property, $values){
+
+    $rem: ();
+    $px: ();
+
+    @each $value in $values{
+        $rem: append($rem, 0rem + $value / $base-font-size);
+        $px: append($px, 0px + $value);
+    }
+
+    #{$property}: $px;
+    #{$property}: $rem;
+}
+
+
+
+
+/**
+ * Outputs a unitless value in rems with a fallback in pixels.
+ *
+   `@include font-rem(16)`
+ *
+ * @param number $size A unitless size - think in pixels
+ */
+@mixin font-rem($size){
+    font-size: 0px + $size;
+    font-size: 0rem + $size / $base-font-size;
+}
+
+
+
+
+/**
+ * Outputs a font size and line height for a pixel value in rems with a fallback
+ *
+   `@include font-size(16)`
+   `@include font-size(16, 24)`
+ *
+ * @param number $size A unitless size - think in pixels
+ * @param number $line-height=$base-line-height The line height
+ */
+@mixin font-size($size, $line-height: $base-line-height){
+    @include font-rem($size);
+    line-height: ceil($size / $line-height) * ($line-height / $size);
+}

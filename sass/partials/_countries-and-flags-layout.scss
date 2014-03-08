@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    COUNTRIES
+\*------------------------------------*/
+
+.countries{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+    .country{
+
+        flex: 0 0 100%;
+
+        @include breakpoint('800px'){
+            flex: 0 0 33.33333%;
+        }
+
+        @include breakpoint('1100px'){
+            flex: 0 0 25%;
+        }
+
+        @include rem('padding', $base-unit);
+    }
+
+
+        .country__flag{
+            position: relative;
+            padding-bottom: 56%;
+            height: 0;
+
+            @include rem('margin-bottom', $base-unit);
+
+            .flag{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }

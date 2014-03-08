@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    VARIABLES
+\*------------------------------------*/
+
+$base-unit: 24;
+
+$text-color: #222;
+$base-font-size: 16;
+$base-font-family: Helvetica, sans-serif;
+$base-line-height: $base-unit;
+
+$heading-font-family: Georgia, serif;
+$heading-line-height: $base-line-height;
+
+$fixed-font-family: monospaced;
+$fixed-font-size: $base-font-size;
+$fixed-line-height: $base-line-height;
+
+
+/*------------------------------------*\
+    MIXINS
+\*------------------------------------*/
+
+@import "mixins/rems";
+@import "mixins/media-queries";
+
+@import "partials/base";
+@import "partials/typography";
+@import "partials/countries-and-flags-layout";

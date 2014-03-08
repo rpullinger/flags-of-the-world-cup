@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+
+/**
+ * Wraps the content in a min width media query
+ *
+   `@include breakpoint(200px){
+       .example{
+           font-size: 20px;
+       }
+   }`
+ *
+ * @param number $start When the media query should kick in
+ */
+@mixin breakpoint($start) {
+    @media only screen and (min-width: $start){
+        @content;
+    }
+}
