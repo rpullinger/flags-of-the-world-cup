@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    BRAZIL
+\*------------------------------------*/
+
+.flag--brazil{
+    position: relative;
+    background: #00a859;
+
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+    }
+
+    &:before{
+        top: 50%;
+        left: 30%;
+
+        width: 40%;
+        height: 0;
+        padding-bottom: 40%;
+
+
+        transform-origin: center;
+        transform: translateY(-50%)
+                   rotate(90deg)
+                   skewX(-27deg)
+                   skewY(45deg);
+
+        background: #ffcc29;
+    }
+
+    &:after{
+        top: 50%;
+        left: 35%;
+        width: 30%;
+        padding-bottom: 30%;
+
+        border-radius: 50%;
+
+        background: #3e4095;
+        background-image: repeating-radial-gradient(
+                            #3e4095,
+                            #3e4095 53%,
+                            #fff 53%,
+                            #fff 57%);
+        background-size: 300%;
+        background-position: left 30%;
+
+        transform: translateY(-50%)
+                   rotate(90deg);
+
+    }
+
+}
