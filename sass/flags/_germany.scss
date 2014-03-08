@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    GERMANY
+\*------------------------------------*/
+
+.flag--germany{
+    background: #ff0000;
+    position: relative;
+
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        height: 33.33%;
+        left: 0;
+        right: 0;
+    }
+
+    &:before{
+        background-color: #000000;
+        bottom: 66.6666%;
+    }
+
+    &:after{
+        background-color: #ffcc00;
+        top: 66.6666%;
+    }
+}
