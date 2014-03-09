@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    GREECE
+\*------------------------------------*/
+
+.flag--greece{
+    position: relative;
+    background-color: #fff;
+    background-image: repeating-linear-gradient(
+                          #1a75cf,
+                          #1a75cf 11.1111%,
+                          transparent 11.1111%,
+                          transparent 22.2222%
+                      );
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 0;
+        width: 33.3333%;
+        height: 55.3333%;
+        background-color: #1a75cf;
+
+        background-image: linear-gradient(
+                              transparent,
+                              transparent 40%,
+                              #fff 40%,
+                              #fff 60%,
+                              transparent 60%,
+                              transparent
+                          ),
+
+                          linear-gradient(
+                              90 deg,
+                              transparent,
+                              transparent 40%,
+                              #fff 40%,
+                              #fff 60%,
+                              transparent 60%,
+                              transparent
+                          );
+
+
+    }
+}
