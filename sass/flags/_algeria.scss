@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    ALGERIA
+\*------------------------------------*/
+
+.flag--algeria{
+    position: relative;
+    background: linear-gradient(
+                    90deg,
+                    #007938,
+                    #007938 50%,
+                    #fff 50%,
+                    #fff
+                );
+
+
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%)
+                   translateX(-50%);
+    }
+
+    &:before{
+        width: 30%;
+        padding-bottom: 30%;
+        background: radial-gradient(
+                        circle at 61% center,
+                        transparent 52%,
+                        #b22d12 52%
+                    );
+        background-size: 100%;
+        background-position: bottom right;
+        border-radius: 50%;
+    }
+
+    &:after{
+        content: '';
+
+        width: 35%;
+        padding-bottom: 35%;
+
+        background:
+            linear-gradient(36deg, #fff 10%, transparent 10%) 49% 0,
+            linear-gradient(324deg, #fff 10%, transparent 10%) -49% 0,
+            linear-gradient(72deg, #b22d12 20%, transparent 20%) 49% 0,
+            linear-gradient(288deg, #b22d12 20%, transparent 20%) -49% 0,
+
+            linear-gradient(216deg, #b22d12 17%, transparent 17%) -49% 49%,
+            linear-gradient(144deg, #b22d12 17%, transparent 17%) 49% 49%;
+
+        // background-position: center center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: 50%;
+        transform-origin: center;
+
+        transform: translateY(-25%)
+                   translateX(-12%)
+                   rotate(15deg);
+
+    }
+
+}
