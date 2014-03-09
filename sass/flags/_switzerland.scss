@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    SWITZERLAND
+\*------------------------------------*/
+
+.flag--switzerland{
+    position: relative;
+    background: #ff0000;
+
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translateY(-50%)
+                   translateX(-50%);
+        background: #fff;
+        width: 35%;
+        padding-bottom: 10%;
+    }
+
+    &:after{
+        transform-origin: top left;
+        transform: rotate(90deg)
+                   translateY(-50%)
+                   translateX(-50%);
+    }
+}
