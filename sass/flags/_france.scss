@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    FRANCE
+\*------------------------------------*/
+
+.flag--france{
+    background: #fff;
+    position: relative;
+
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        width: 33.33%;
+        top: 0;
+        bottom: 0;
+    }
+
+    &:before{
+        background-color: #ef4135;
+        left: 66.6666%;
+    }
+
+    &:after{
+        background-color: #0055A4;
+        right: 66.6666%;
+    }
+}
