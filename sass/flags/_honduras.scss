@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    HONDURAS
+\*------------------------------------*/
+
+.flag--honduras{
+
+    position: relative;
+
+    background: linear-gradient(
+        #1a75cf 33.3333%,
+        #fff 33.3333%,
+        #fff 66.6666%,
+        #1a75cf 66.6666%
+    );
+
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        width: 60%;
+        padding-bottom: 18%;
+
+        background:
+
+            // overlay to cover the middle stars
+            linear-gradient(
+                90deg,
+                transparent 25%,
+                #fff 25%,
+                #fff 75%,
+                transparent 75%,
+                transparent
+            ) 0% 0%,
+
+            linear-gradient(36deg, #fff 20%, transparent 10%) 50% 0,
+            linear-gradient(324deg, #fff 20%, transparent 10%) -49% 0,
+            linear-gradient(72deg, #1a75cf 18%, transparent 18%) 50% 0,
+            linear-gradient(288deg, #1a75cf 18%, transparent 18%) -49% 0,
+
+            linear-gradient(216deg, #1a75cf 17%, transparent 17%) -49% 25%,
+            linear-gradient(144deg, #1a75cf 17%, transparent 17%) 49% 25%;
+
+
+
+        background-color: transparent;
+        background-size:
+            100% 100%,
+            25% 50%,
+            25% 50%,
+            25% 50%,
+            25% 50%,
+            25% 50%,
+            25% 50%;
+    }
+
+    &:after{
+        background:
+            linear-gradient(36deg, #fff 20%, transparent 10%) 50% 0,
+            linear-gradient(72deg, #1a75cf 18%, transparent 18%) 50% 0,
+            linear-gradient(144deg, #1a75cf 17%, transparent 17%) 49% 25%,
+
+            linear-gradient(324deg, #fff 20%, transparent 10%) 17% 0,
+            linear-gradient(288deg, #1a75cf 18%, transparent 18%) 17% 0,
+
+            linear-gradient(216deg, #1a75cf 17%, transparent 17%) 17% 25%;
+
+        background-size: 25% 50%;
+        background-repeat: no-repeat;
+
+        transform: translate(-35%, -20%);
+        //outline: 2px solid black;
+        //
+        width: 60%;
+        // padding-bottom: 4.5%;
+
+    }
+}
