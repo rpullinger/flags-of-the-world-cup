@@ -1,0 +1,27 @@
+/*------------------------------------*\
+    MEXICO
+\*------------------------------------*/
+
+.flag--mexico{
+    background: #fff;
+    position: relative;
+
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        width: 33.33%;
+        top: 0;
+        bottom: 0;
+    }
+
+    &:before{
+        background-color: #ce1126;
+        left: 66.6666%;
+    }
+
+    &:after{
+        background-color: #006847;
+        right: 66.6666%;
+    }
+}
