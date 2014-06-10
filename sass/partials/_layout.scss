@@ -1,14 +1,50 @@
 /*------------------------------------*\
-    LAYOUT
+    PAGE
 \*------------------------------------*/
 
 body{
-    max-width: 960px;
-    margin: 0 auto;
+    background: #eee;
 }
 
+.header,
+.footer{
+    @include rem('padding', $base-unit * 2);
+    background: #ddd;
+}
 
 .header{
-    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    color: #333;
 }
 
+.footer p{
+    @extend %tight;
+}
+
+
+
+.main-heading{
+
+    letter-spacing: 2px;
+    line-height: 1.2;
+
+    i{
+        display: block;
+        font-weight: 200;
+    }
+}
+
+.sub-heading{
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+
+.social-links{
+    padding-top: 24px;
+}

@@ -7,8 +7,8 @@
  * Useful placeholders
  */
 
-%hn{ font-family: $heading-font-family; }
-%h1{ @include font-size(30, $heading-line-height); }
+%hn{ font-family: $heading-font-family; font-weight: bold; }
+%h1{ @include font-size(50, $heading-line-height); }
 %h2{ @include font-size(24, $heading-line-height); }
 %h3{ @include font-size(22, $heading-line-height); }
 %h4{ @include font-size(20, $heading-line-height); }
@@ -84,7 +84,7 @@ sub{ vertical-align: bottom; }
 sup{ vertical-align: top; }
 
 hr{
-    border: 1px solid red;
+    border: 1px solid #ededed;
 }
 
 ul,
@@ -105,4 +105,17 @@ blockquote{
 figure{
     margin-left: 0;
     margin-right: 0;
+}
+
+
+a{
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn{
+    display: inline-block;
+    padding: 6px;
+    border: 1px solid #aaa;
 }

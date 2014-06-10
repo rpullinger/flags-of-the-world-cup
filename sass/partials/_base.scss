@@ -2,6 +2,11 @@
     BASE
 \*------------------------------------*/
 
+body{
+    padding: 0;
+    margin: 0;
+}
+
 /*
 Border box everything! http://paulirish.com/2012/box-sizing-border-box-ftw/
  */
@@ -45,7 +50,7 @@ Shared vertical rhythm - csswizardry.com/2012/06/single-direction-margin-declara
  */
 h1, h2, h3, h4, h5, h6,
 ul, ol, dl,
-blockquote,p,address,
+blockquote, p, address,
 table,
 fieldset,figure,
 hr,
@@ -62,3 +67,9 @@ pre{
     %flush{ margin-bottom: 0; }
     %tight{ @include rem('margin-bottom', $base-unit / 2); }
     %spaced{ @include rem('margin-bottom', $base-unit * 2); }
+
+
+
+i{
+    font-family: serif;
+}

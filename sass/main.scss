@@ -4,12 +4,12 @@
 
 $base-unit: 24;
 
-$text-color: #222;
+$text-color: rgba(0, 0, 0, 0.8);
 $base-font-size: 16;
-$base-font-family: Helvetica, sans-serif;
+$base-font-family: 'Open Sans', Helvetica, sans-serif;
 $base-line-height: $base-unit;
 
-$heading-font-family: Georgia, serif;
+$heading-font-family: 'Open Sans', sans-serif;
 $heading-line-height: $base-line-height;
 
 $fixed-font-family: monospaced;
@@ -21,15 +21,12 @@ $fixed-line-height: $base-line-height;
     MIXINS
 \*------------------------------------*/
 
-body{
-    background: #eee;
-}
-
 @import "mixins/rems";
 @import "mixins/media-queries";
 
 @import "partials/base";
 @import "partials/typography";
+@import "partials/layout";
 @import "partials/countries-and-flags-layout";
 
 @import "flags/brazil";
