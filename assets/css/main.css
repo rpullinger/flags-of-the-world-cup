@@ -1,0 +1,739 @@
+/*------------------------------------*\
+    VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    REMS
+\*------------------------------------*/
+/**
+ * Takes a property and one or many unitless values and converts them to rems with a
+ * pixel fallback.
+ *
+   `@include rem(padding-bottom, 24)`
+   `@include rem(margin, 24 48 12 24)`
+ *
+ * @param number $property The property to output
+ * @param list $values The values to convert. Unitless but think in pixels
+ */
+/**
+ * Outputs a unitless value in rems with a fallback in pixels.
+ *
+   `@include font-rem(16)`
+ *
+ * @param number $size A unitless size - think in pixels
+ */
+/**
+ * Outputs a font size and line height for a pixel value in rems with a fallback
+ *
+   `@include font-size(16)`
+   `@include font-size(16, 24)`
+ *
+ * @param number $size A unitless size - think in pixels
+ * @param number $line-height=$base-line-height The line height
+ */
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/**
+ * Wraps the content in a min width media query
+ *
+   `@include breakpoint(200px){
+       .example{
+           font-size: 20px;
+       }
+   }`
+ *
+ * @param number $start When the media query should kick in
+ */
+/*------------------------------------*\
+    BASE
+\*------------------------------------*/
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+Border box everything! http://paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+Make images responsive by default
+ */
+img {
+  max-width: 100%;
+}
+
+/*
+Get forms elements to follow our font styling
+ */
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+/*
+Shared vertical rhythm - csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+hr,
+pre {
+  margin-top: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+h1:last-child, h1.last, h2:last-child, h2.last, h3:last-child, h3.last, h4:last-child, h4.last, h5:last-child, h5.last, h6:last-child, h6.last,
+ul:last-child,
+ul.last, ol:last-child, ol.last, dl:last-child, dl.last,
+blockquote:last-child,
+blockquote.last, p:last-child, p.last, address:last-child, address.last,
+table:last-child,
+table.last,
+fieldset:last-child,
+fieldset.last, figure:last-child, figure.last,
+hr:last-child,
+hr.last,
+pre:last-child,
+pre.last {
+  margin-bottom: 0;
+}
+
+.footer p {
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+}
+
+i {
+  font-family: serif;
+}
+
+/*------------------------------------*\
+    TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Useful placeholders
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 50px;
+  font-size: 3.125rem;
+  line-height: 1.44;
+}
+
+h2 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.09091;
+}
+
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+h5 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+
+h6 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+pre,
+code {
+  font-family: monospaced;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+small {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2;
+}
+
+small {
+  color: #aaa;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 900;
+}
+
+/**
+ * Style the basics
+ */
+body {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Open Sans", Helvetica, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+sub {
+  vertical-align: bottom;
+}
+
+sup {
+  vertical-align: top;
+}
+
+hr {
+  border: 1px solid #ededed;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style-position: outside;
+}
+
+dd {
+  margin-left: 0;
+}
+
+blockquote {
+  margin-left: 24px;
+  margin-left: 1.5rem;
+  margin-right: 24px;
+  margin-right: 1.5rem;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px;
+  border: 1px solid #aaa;
+}
+
+/*------------------------------------*\
+    PAGE
+\*------------------------------------*/
+body {
+  background: #eee;
+}
+
+.header,
+.footer {
+  padding: 48px;
+  padding: 3rem;
+  background: #ddd;
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  color: #333;
+}
+
+.main-heading {
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+.main-heading i {
+  display: block;
+  font-weight: 200;
+}
+
+.sub-heading {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+
+.social-links {
+  padding-top: 24px;
+}
+
+/*------------------------------------*\
+    COUNTRIES
+\*------------------------------------*/
+.countries {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.country {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  padding: 24px;
+  padding: 1.5rem;
+}
+@media only screen and (min-width: 800px) {
+  .country {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .country {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+  }
+}
+
+.country__flag {
+  position: relative;
+  padding-bottom: 56%;
+  height: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+.country__flag .flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*------------------------------------*\
+    BRAZIL
+\*------------------------------------*/
+.flag--brazil {
+  position: relative;
+  background: #00a859;
+}
+.flag--brazil:before, .flag--brazil:after {
+  content: '';
+  position: absolute;
+}
+.flag--brazil:before {
+  top: 50%;
+  left: 30%;
+  width: 40%;
+  height: 0;
+  padding-bottom: 40%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: translateY(-50%) rotate(90deg) skewX(-27deg) skewY(45deg);
+  -ms-transform: translateY(-50%) rotate(90deg) skewX(-27deg) skewY(45deg);
+  transform: translateY(-50%) rotate(90deg) skewX(-27deg) skewY(45deg);
+  background: #ffcc29;
+}
+.flag--brazil:after {
+  top: 50%;
+  left: 35%;
+  width: 30%;
+  padding-bottom: 30%;
+  border-radius: 50%;
+  background: #3e4095;
+  background-image: -webkit-repeating-radial-gradient(#3e4095, #3e4095 53%, white 53%, white 57%);
+  background-image: repeating-radial-gradient(#3e4095, #3e4095 53%, white 53%, white 57%);
+  background-size: 300%;
+  background-position: left 30%;
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/*------------------------------------*\
+    JAPAN
+\*------------------------------------*/
+.flag--japan {
+  background: #fff;
+  position: relative;
+}
+.flag--japan:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 33.3333%;
+  height: 0;
+  width: 33.3333%;
+  padding-bottom: 33.3333%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #ef3340;
+}
+
+/*------------------------------------*\
+    NETHERLANDS
+\*------------------------------------*/
+.flag--netherlands {
+  background: #fff;
+  position: relative;
+}
+.flag--netherlands:before, .flag--netherlands:after {
+  content: '';
+  position: absolute;
+  height: 33.33%;
+  left: 0;
+  right: 0;
+}
+.flag--netherlands:before {
+  background-color: #ae1c28;
+  bottom: 66.6666%;
+}
+.flag--netherlands:after {
+  background-color: #21468b;
+  top: 66.6666%;
+}
+
+/*------------------------------------*\
+    ITALY
+\*------------------------------------*/
+.flag--italy {
+  background: #f1f2f1;
+  position: relative;
+}
+.flag--italy:before, .flag--italy:after {
+  content: '';
+  position: absolute;
+  width: 33.33%;
+  top: 0;
+  bottom: 0;
+}
+.flag--italy:before {
+  background-color: #ce2b37;
+  left: 66.6666%;
+}
+.flag--italy:after {
+  background-color: #009246;
+  right: 66.6666%;
+}
+
+/*------------------------------------*\
+    BELGIUM
+\*------------------------------------*/
+.flag--belgium {
+  background: #ffe936;
+  position: relative;
+}
+.flag--belgium:before, .flag--belgium:after {
+  content: '';
+  position: absolute;
+  width: 33.33%;
+  top: 0;
+  bottom: 0;
+}
+.flag--belgium:before {
+  background-color: #ff0f21;
+  left: 66.6666%;
+}
+.flag--belgium:after {
+  background-color: #000;
+  right: 66.6666%;
+}
+
+/*------------------------------------*\
+    GERMANY
+\*------------------------------------*/
+.flag--germany {
+  background: #ff0000;
+  position: relative;
+}
+.flag--germany:before, .flag--germany:after {
+  content: '';
+  position: absolute;
+  height: 33.33%;
+  left: 0;
+  right: 0;
+}
+.flag--germany:before {
+  background-color: #000000;
+  bottom: 66.6666%;
+}
+.flag--germany:after {
+  background-color: #ffcc00;
+  top: 66.6666%;
+}
+
+/*------------------------------------*\
+    GREECE
+\*------------------------------------*/
+.flag--greece {
+  position: relative;
+  background-color: #fff;
+  background-image: -webkit-repeating-linear-gradient(#1a75cf, #1a75cf 11.1111%, transparent 11.1111%, transparent 22.2222%);
+  background-image: repeating-linear-gradient(#1a75cf, #1a75cf 11.1111%, transparent 11.1111%, transparent 22.2222%);
+}
+.flag--greece:before {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 33.3333%;
+  height: 55.3333%;
+  background-color: #1a75cf;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, transparent), color-stop(40%, white), color-stop(60%, white), color-stop(60%, transparent), to(transparent)), linear-gradient(90 deg, transparent, transparent 40%, white 40%, white 60%, transparent 60%, transparent);
+  background-image: -webkit-linear-gradient(transparent, transparent 40%, white 40%, white 60%, transparent 60%, transparent), -webkit-linear-gradient(0deg, transparent, transparent 40%, white 40%, white 60%, transparent 60%, transparent);
+  background-image: linear-gradient(transparent, transparent 40%, white 40%, white 60%, transparent 60%, transparent), linear-gradient(90 deg, transparent, transparent 40%, white 40%, white 60%, transparent 60%, transparent);
+}
+
+/*------------------------------------*\
+    SWITZERLAND
+\*------------------------------------*/
+.flag--switzerland {
+  position: relative;
+  background: #ff0000;
+}
+.flag--switzerland:before, .flag--switzerland:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  background: #fff;
+  width: 35%;
+  padding-bottom: 10%;
+}
+.flag--switzerland:after {
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: rotate(90deg) translateY(-50%) translateX(-50%);
+  -ms-transform: rotate(90deg) translateY(-50%) translateX(-50%);
+  transform: rotate(90deg) translateY(-50%) translateX(-50%);
+}
+
+/*------------------------------------*\
+    ENGLAND
+\*------------------------------------*/
+.flag--england {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+.flag--england:before, .flag--england:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  background: #cc0000;
+  width: 100%;
+  padding-bottom: 10%;
+}
+.flag--england:after {
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: rotate(90deg) translateY(-50%) translateX(-50%);
+  -ms-transform: rotate(90deg) translateY(-50%) translateX(-50%);
+  transform: rotate(90deg) translateY(-50%) translateX(-50%);
+}
+
+/*------------------------------------*\
+    ALGERIA
+\*------------------------------------*/
+.flag--algeria {
+  position: relative;
+  background: -webkit-linear-gradient(0deg, #007938, #007938 50%, white 50%, white);
+  background: linear-gradient(90deg, #007938, #007938 50%, white 50%, white);
+}
+.flag--algeria:before, .flag--algeria:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+.flag--algeria:before {
+  width: 30%;
+  padding-bottom: 30%;
+  background: -webkit-radial-gradient(61% center, circle, transparent 52%, #b22d12 52%);
+  background: radial-gradient(circle at 61% center, transparent 52%, #b22d12 52%);
+  background-size: 100%;
+  background-position: bottom right;
+  border-radius: 50%;
+}
+.flag--algeria:after {
+  content: '';
+  width: 35%;
+  padding-bottom: 35%;
+  background: -webkit-linear-gradient(54deg, white 10%, transparent 10%) 49% 0, -webkit-linear-gradient(126deg, white 10%, transparent 10%) -49% 0, -webkit-linear-gradient(18deg, #b22d12 20%, transparent 20%) 49% 0, -webkit-linear-gradient(162deg, #b22d12 20%, transparent 20%) -49% 0, -webkit-linear-gradient(234deg, #b22d12 17%, transparent 17%) -49% 49%, -webkit-linear-gradient(306deg, #b22d12 17%, transparent 17%) 49% 49%;
+  background: linear-gradient(36deg, white 10%, transparent 10%) 49% 0, linear-gradient(324deg, white 10%, transparent 10%) -49% 0, linear-gradient(72deg, #b22d12 20%, transparent 20%) 49% 0, linear-gradient(288deg, #b22d12 20%, transparent 20%) -49% 0, linear-gradient(216deg, #b22d12 17%, transparent 17%) -49% 49%, linear-gradient(144deg, #b22d12 17%, transparent 17%) 49% 49%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 50%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: translateY(-25%) translateX(-12%) rotate(15deg);
+  -ms-transform: translateY(-25%) translateX(-12%) rotate(15deg);
+  transform: translateY(-25%) translateX(-12%) rotate(15deg);
+}
+
+/*------------------------------------*\
+    HONDURAS
+\*------------------------------------*/
+.flag--honduras {
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1a75cf), color-stop(33.3333%, white), color-stop(66.6666%, white), to(#1a75cf));
+  background: -webkit-linear-gradient(#1a75cf 33.3333%, white 33.3333%, white 66.6666%, #1a75cf 66.6666%);
+  background: linear-gradient(#1a75cf 33.3333%, white 33.3333%, white 66.6666%, #1a75cf 66.6666%);
+}
+.flag--honduras:before, .flag--honduras:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 60%;
+  padding-bottom: 18%;
+  background: -webkit-linear-gradient(0deg, transparent 25%, white 25%, white 75%, transparent 75%, transparent) 0% 0%, -webkit-linear-gradient(54deg, white 20%, transparent 10%) 50% 0, -webkit-linear-gradient(126deg, white 20%, transparent 10%) -49% 0, -webkit-linear-gradient(18deg, #1a75cf 18%, transparent 18%) 50% 0, -webkit-linear-gradient(162deg, #1a75cf 18%, transparent 18%) -49% 0, -webkit-linear-gradient(234deg, #1a75cf 17%, transparent 17%) -49% 25%, -webkit-linear-gradient(306deg, #1a75cf 17%, transparent 17%) 49% 25%;
+  background: linear-gradient(90deg, transparent 25%, white 25%, white 75%, transparent 75%, transparent) 0% 0%, linear-gradient(36deg, white 20%, transparent 10%) 50% 0, linear-gradient(324deg, white 20%, transparent 10%) -49% 0, linear-gradient(72deg, #1a75cf 18%, transparent 18%) 50% 0, linear-gradient(288deg, #1a75cf 18%, transparent 18%) -49% 0, linear-gradient(216deg, #1a75cf 17%, transparent 17%) -49% 25%, linear-gradient(144deg, #1a75cf 17%, transparent 17%) 49% 25%;
+  background-color: transparent;
+  background-size: 100% 100%, 25% 50%, 25% 50%, 25% 50%, 25% 50%, 25% 50%, 25% 50%;
+}
+.flag--honduras:after {
+  background: -webkit-linear-gradient(54deg, white 20%, transparent 10%) 50% 0, -webkit-linear-gradient(18deg, #1a75cf 18%, transparent 18%) 50% 0, -webkit-linear-gradient(306deg, #1a75cf 17%, transparent 17%) 49% 25%, -webkit-linear-gradient(126deg, white 20%, transparent 10%) 17% 0, -webkit-linear-gradient(162deg, #1a75cf 18%, transparent 18%) 17% 0, -webkit-linear-gradient(234deg, #1a75cf 17%, transparent 17%) 17% 25%;
+  background: linear-gradient(36deg, white 20%, transparent 10%) 50% 0, linear-gradient(72deg, #1a75cf 18%, transparent 18%) 50% 0, linear-gradient(144deg, #1a75cf 17%, transparent 17%) 49% 25%, linear-gradient(324deg, white 20%, transparent 10%) 17% 0, linear-gradient(288deg, #1a75cf 18%, transparent 18%) 17% 0, linear-gradient(216deg, #1a75cf 17%, transparent 17%) 17% 25%;
+  background-size: 25% 50%;
+  background-repeat: no-repeat;
+  -webkit-transform: translate(-35%, -20%);
+  -ms-transform: translate(-35%, -20%);
+  transform: translate(-35%, -20%);
+  width: 60%;
+}
+
+/*------------------------------------*\
+    MEXICO
+\*------------------------------------*/
+.flag--mexico {
+  background: #fff;
+  position: relative;
+}
+.flag--mexico:before, .flag--mexico:after {
+  content: '';
+  position: absolute;
+  width: 33.33%;
+  top: 0;
+  bottom: 0;
+}
+.flag--mexico:before {
+  background-color: #ce1126;
+  left: 66.6666%;
+}
+.flag--mexico:after {
+  background-color: #006847;
+  right: 66.6666%;
+}
+
+/*------------------------------------*\
+    FRANCE
+\*------------------------------------*/
+.flag--france {
+  background: #fff;
+  position: relative;
+}
+.flag--france:before, .flag--france:after {
+  content: '';
+  position: absolute;
+  width: 33.33%;
+  top: 0;
+  bottom: 0;
+}
+.flag--france:before {
+  background-color: #ef4135;
+  left: 66.6666%;
+}
+.flag--france:after {
+  background-color: #0055A4;
+  right: 66.6666%;
+}
+
+/*------------------------------------*\
+    URUGUAY
+\*------------------------------------*/
+.flag--uruguay {
+  position: relative;
+  background-color: #fff;
+  background-image: -webkit-repeating-linear-gradient(transparent, transparent 12.5%, #1a75cf 12.5%, #1a75cf 25.1%);
+  background-image: repeating-linear-gradient(transparent, transparent 12.5%, #1a75cf 12.5%, #1a75cf 25.1%);
+}
+.flag--uruguay:before {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 33.3333%;
+  height: 55.3333%;
+  background-color: #fff;
+}
